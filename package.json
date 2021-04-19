@@ -1,0 +1,13 @@
+{
+  "name": "career-moves",
+  "license": "MIT",
+  "engines": {
+    "node": "14.14.0",
+    "yarn": "1.22.10"
+  },
+  "scripts": {
+    "build": "yarn --cwd career-moves-fe install && yarn --cwd career-moves-fe build",
+    "deploy": "cp -a career-moves-fe/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  }
+}
